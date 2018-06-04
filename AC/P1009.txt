@@ -1,0 +1,10 @@
+n=int(input())
+s=1
+i=1
+ans=0
+while(i<=n):
+    s=s*i
+    ans=ans+s
+    i=i+1
+print(ans)
+    

@@ -1,0 +1,60 @@
+#include<cstdio>
+int main(){
+	int n,xs,i;
+	scanf("%d\n",&n);
+	for(i=n;i>=0;i--){
+		scanf("%d",&xs);
+		if(i<n&&i>1){
+			if(xs==1)
+				printf("+x^%d",i);
+			if(xs==-1)
+				printf("-x^%d",i);
+		    if(xs>1)
+				printf("+%dx^%d",xs,i);
+			if(xs<-1)
+				printf("%dx^%d",xs,i);
+		}
+		if(i==1&&i!=n){
+			if(xs==1)
+				printf("+x");
+			if(xs==-1)
+				printf("-x");
+		    if(xs>1)
+				printf("+%dx",xs);
+			if(xs<-1)
+				printf("%dx",xs);
+		}
+		if(i==n&&i!=1&&i!=0){
+			if(xs==1)
+				printf("x^%d",i);
+			if(xs==-1)
+				printf("-x^%d",i);
+			if(xs>1)
+				printf("%dx^%d",xs,i);
+			if(xs<-1)
+				printf("%dx^%d",xs,i);
+		}
+		if(i==0&&i!=n){
+			if(xs==1)
+				printf("+1");
+			if(xs==-1)
+				printf("-1");
+			if(xs>1)
+				printf("+%d",xs);
+			if(xs<-1)
+				printf("%d",xs);
+		}
+		if((i==1||i==0)&&i==n){
+			if(xs==1)
+				printf("x");
+			if(xs==-1)
+				printf("-x");
+			if(xs>1)
+				printf("%dx",xs);
+			if(xs<-1)
+				printf("%dx",xs);
+		}
+	}
+	return 0;
+}
+
